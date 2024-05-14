@@ -5,9 +5,7 @@ import { LoginComponent } from '../login/login.component';
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [
-    LoginComponent
-  ],
+  imports: [],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
 })
