@@ -100,7 +100,8 @@
       display: none;
     }
   }
-  background-img {
+
+  .background-img {
     width: 100%;
     min-height: 200vh;
     object-fit: cover;
