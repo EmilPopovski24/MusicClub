@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, Router } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -22,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'MusicClub';
 }
