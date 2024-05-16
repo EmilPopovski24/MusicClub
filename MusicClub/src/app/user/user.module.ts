@@ -4,7 +4,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 
-
 const routes: Routes = [
   {
     path: 'login',
@@ -27,4 +26,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class UserRoutingModule { }
