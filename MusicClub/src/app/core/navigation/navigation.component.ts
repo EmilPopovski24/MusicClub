@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from '../../login/login.component';
 import { RegisterComponent } from '../../register/register.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -13,5 +14,5 @@ import { RegisterComponent } from '../../register/register.component';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-
+  constructor(private router:Router) {}
 }
