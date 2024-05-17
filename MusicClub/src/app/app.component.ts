@@ -6,6 +6,7 @@ import { NavigationComponent } from './core/navigation/navigation.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
+import { GlobalLoaderComponent } from './core/global-loader/global-loader.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ProfileComponent } from './user/profile/profile.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent, 
+    GlobalLoaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
