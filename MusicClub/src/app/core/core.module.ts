@@ -4,12 +4,12 @@ import { RouterModule, RouterLink } from '@angular/router';
 import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 
 @NgModule({
-  declarations: [GlobalLoaderComponent],
+  declarations: [
+  ],
   imports: [
     CommonModule, RouterModule, 
   ],
   exports: [
-    GlobalLoaderComponent
   ]
 })
 export class CoreModule { }
