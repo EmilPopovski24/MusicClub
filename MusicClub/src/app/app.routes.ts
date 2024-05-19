@@ -5,11 +5,11 @@ import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    pathMatch: "full",
-    redirectTo: '/home',
-  },
+  // {
+  //   path: '',
+  //   pathMatch: "full",
+  //   redirectTo: '/home',
+  // },
   {
     path: '',
     pathMatch: "full",
