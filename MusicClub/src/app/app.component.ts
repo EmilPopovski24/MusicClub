@@ -8,6 +8,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './user/user-list/user-list.component';
 
 @Component({
   selector: 'app-root',
