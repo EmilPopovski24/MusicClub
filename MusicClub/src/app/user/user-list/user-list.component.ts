@@ -17,7 +17,6 @@ export class UserListComponent implements OnInit {
     console.log('ui')
     this.userService.fetchUsers().subscribe((users) => {
       console.log(users)
-      
     })
   }
 }

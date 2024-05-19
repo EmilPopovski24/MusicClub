@@ -8,13 +8,14 @@ import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
-import { UserListComponent } from './user/user-list/user-list.component';
+import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user/user.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet, 
     HomeComponent, 
     NavigationComponent,
@@ -24,7 +25,7 @@ import { UserRoutingModule } from './user/user.module';
     ProfileComponent, 
     CoreModule,
     HttpClientModule, 
-    UserRoutingModule,
+    UserRoutingModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
