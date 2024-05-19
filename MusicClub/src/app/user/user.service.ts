@@ -10,7 +10,7 @@ export class UserService implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    // 
+    
   }
 
   fetchUsers() {
