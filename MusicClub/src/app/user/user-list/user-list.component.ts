@@ -4,8 +4,8 @@ import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-list',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css'
 })
