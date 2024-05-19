@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { LoginComponent } from './user/login/login.component';
-import { UserListComponent } from './user/user-list/user-list.component';
 
 export const routes: Routes = [
   // {
