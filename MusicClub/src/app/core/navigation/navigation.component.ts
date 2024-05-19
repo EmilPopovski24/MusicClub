@@ -16,4 +16,9 @@ import { Router } from '@angular/router';
 
 export class NavigationComponent {
   constructor(private router:Router) {}
-}
+
+  navigateTo(path:string):void {
+    this.router.navigate([path])
+  }
+  }
+  
