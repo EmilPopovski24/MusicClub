@@ -9,8 +9,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './user/user-list/user-list.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { UserRoutingModule } from './user/user.module';
+
 
 @Component({
   selector: 'app-root',
@@ -25,8 +24,7 @@ import { UserRoutingModule } from './user/user.module';
     RegisterComponent,
     ProfileComponent, 
     CoreModule,
-    HttpClientModule,
-    UserRoutingModule
+    UserListComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
