@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from '../../user/login/login.component';
 import { RegisterComponent } from '../../user/register/register.component';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
   imports: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RouterModule
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
