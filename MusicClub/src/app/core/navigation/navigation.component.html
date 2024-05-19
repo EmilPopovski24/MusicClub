@@ -3,8 +3,10 @@
   <nav>
     <a href="/">Music Club</a>
     <ul class="list">
-      <li (click)="navigateTo('login')">Login</li>
-      <li (click)="navigateTo('register')">Register</li>
+      <li routerLink="login">Login</li>
+      <li routerLink="register">Register</li>
+      <!-- <li (click)="navigateTo('login')">Login</li>
+      <li (click)="navigateTo('register')">Register</li> -->
       <li routerLink="/logout">Logout</li>
       <li routerLink="/catalog">Catalog</li>
     </ul>
