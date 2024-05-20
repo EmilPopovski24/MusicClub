@@ -1,5 +1,5 @@
 .background-img {
     width: 100%;
     background-image: url(../assets/backgroundImage.jpg);
-    background-size: contain;
+    background-size: cover;
 }
