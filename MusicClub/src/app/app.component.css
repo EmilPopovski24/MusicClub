@@ -1,3 +1,5 @@
 .background-img {
-    background:scroll;
+    width: 100vh;
+    height:100vh;
+    background-image: url(../assets/backgroundImage.jpg);
 }
