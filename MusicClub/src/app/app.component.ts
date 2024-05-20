@@ -10,7 +10,6 @@ import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './user/user-list/user-list.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
