@@ -9,6 +9,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { BackgroundComponent } from './core/background/background.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { UserListComponent } from './user/user-list/user-list.component';
     RegisterComponent,
     ProfileComponent, 
     CoreModule,
-    UserListComponent
+    UserListComponent, 
+    BackgroundComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
