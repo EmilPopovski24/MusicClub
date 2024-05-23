@@ -37,5 +37,11 @@ export const routes: Routes = [
     pathMatch: "full",
     canActivate: [AuthGuard],
     component: ProfileComponent
-  }
+  },
+  // {
+  //   path: 'addalbum',
+  //   pathMatch: "full",
+  //   canActivate: [AuthGuard],
+  //   // component: ProfileComponent
+  // }
 ];
