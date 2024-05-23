@@ -25,16 +25,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forChild([
-    {
-      path: 'user/profile',
-      component: ProfileComponent
-    },
-    {
-      path: 'user/login',
-      component: LoginComponent
-    }
-  ])],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 
