@@ -23,7 +23,7 @@ import { BackgroundComponent } from './core/background/background.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent, 
-    CoreModule,
+    // CoreModule,
     UserListComponent, 
     BackgroundComponent
   ],
