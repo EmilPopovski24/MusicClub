@@ -21,12 +21,12 @@ export const routes: Routes = [
     component: CatalogComponent
   }, 
   {
-    path: 'login',
+    path: 'user/login',
     pathMatch: "full",
     component: LoginComponent
   },
   {
-    path: 'register',
+    path: 'user/register',
     pathMatch: "full",
     component: RegisterComponent
   }
