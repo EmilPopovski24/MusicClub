@@ -9,9 +9,7 @@ export class UserService implements OnInit {
 
   constructor(private http:HttpClient) { }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   fetchUsers() {
     return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
