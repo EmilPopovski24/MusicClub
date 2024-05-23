@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
+import { ProfileComponent } from './user/profile/profile.component';
 
 export const routes: Routes = [
   {
@@ -29,5 +30,10 @@ export const routes: Routes = [
     path: 'user/register',
     pathMatch: "full",
     component: RegisterComponent
+  },
+  {
+    path: 'user/profile',
+    pathMatch: "full",
+    component: ProfileComponent
   }
 ];
