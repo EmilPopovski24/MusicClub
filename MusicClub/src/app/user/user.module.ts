@@ -7,25 +7,27 @@ import { UserListComponent } from './user-list/user-list.component';
 
 
 const routes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent
-    //canActivate: [AuthActivate]
-  }, 
-  {
-    path: 'register',
-    component: RegisterComponent
-  }, 
-  {
-    path: 'profile',
-    component: ProfileComponent
-    // canActivate: [AuthActivate]
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  //   //canActivate: [AuthActivate]
+  // }, 
+  // {
+  //   path: 'register',
+  //   component: RegisterComponent
+  // }, 
+  // {
+  //   path: 'profile',
+  //   component: ProfileComponent
+  //   // canActivate: [AuthActivate]
+  // },
 ];
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forChild(routes), RouterLink],
+  imports: [RouterModule.forChild(routes), 
+    // RouterLink
+  ],
   exports: [RouterModule]
 })
 
