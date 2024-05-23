@@ -4,7 +4,7 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink, RouterModule, RouterOutlet],
+  imports: [RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
