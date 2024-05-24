@@ -24,7 +24,12 @@ export class UserService  {
   }
 
   login(): void {
+    this.user = {
+      email: 'john.doe@gmail.com',
+      username: "JohnDoe"
+    }
 
+    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
   }
 
   logout(): void {
