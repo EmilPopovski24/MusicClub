@@ -9,6 +9,10 @@ const USER_KEY = '[user]'
 export class UserService  {
   user: User | undefined
 
+  get isLogged():boolean {
+    return !!this.user
+  }
+
   constructor() {
     try{
       const lsUser = localStorage.getItem(USER_KEY) || ""
