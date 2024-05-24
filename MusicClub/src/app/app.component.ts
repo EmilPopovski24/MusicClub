@@ -6,9 +6,7 @@ import { NavigationComponent } from './core/navigation/navigation.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
-import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
-import { UserListComponent } from './user/user-list/user-list.component';
 import { BackgroundComponent } from './core/background/background.component';
 
 @Component({
@@ -24,7 +22,6 @@ import { BackgroundComponent } from './core/background/background.component';
     RegisterComponent,
     ProfileComponent, 
     // CoreModule,
-    UserListComponent, 
     BackgroundComponent
   ],
   templateUrl: './app.component.html',
