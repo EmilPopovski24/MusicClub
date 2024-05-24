@@ -9,6 +9,7 @@ export class UserService  {
 
   constructor() {
     try{
+      localStorage.getItem('user')
 
     } catch(error) {
 
