@@ -28,7 +28,8 @@ export class UserService  {
   }
 
   logout(): void {
-    this.user
+    this.user = undefined;
+    localStorage.removeItem(this.USER_KEY)
   }
   
 }
