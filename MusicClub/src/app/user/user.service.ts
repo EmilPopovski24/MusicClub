@@ -27,7 +27,7 @@ export class UserService {
   login() :void {
     this.user = {
       email: 'john.doe@gmail.com',
-      username: 'JohnDoe'
+      username: 'John Doe'
     }
 
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
