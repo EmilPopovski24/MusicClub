@@ -1,21 +1,23 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { User } from '../types/User';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class UserService  {
+export class UserService {
   user: User | undefined
   USER_KEY = '[user]'
   
-  get isLogged():boolean {
-    return !!this.user
+  isLogged():boolean {
+    // return true
+    return false
+    // return !!this.user
   }
 
   constructor() {
     try{
-      const lsUser = localStorage.getItem(this.USER_KEY) || ""
+      const lsUser = localStorage.getItem(this.USER_KEY) || "";
       this.user = JSON.parse(lsUser)
     } catch(error) {  
       this.user = undefined
@@ -24,11 +26,12 @@ export class UserService  {
 
   login(): void {
     this.user = {
-      email: 'john.doe@gmail.com'
-      // username: "JohnDoe"
+      email: 'john.doe@gmail.com',
+      username: "JohnDoe"
     }
 
-    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
+    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
+    console.log(this.user.email)
   }
 
   logout(): void {

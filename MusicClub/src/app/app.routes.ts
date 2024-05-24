@@ -4,8 +4,9 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
-import { AuthGuard } from './user/user.guard';
 import { AddAlbumComponent } from './add-album/add-album.component';
+import { AuthActivate } from './core/guards/auth.activate';
+
 
 export const routes: Routes = [
   {
@@ -36,13 +37,13 @@ export const routes: Routes = [
   {
     path: 'user/profile',
     pathMatch: "full",
-    // canActivate: [AuthGuard],
+    canActivate: [AuthActivate],
     component: ProfileComponent
   },
   {
     path: 'add-album',
     pathMatch: "full",
-    // canActivate: [AuthGuard],
+    canActivate: [AuthActivate],
     component: AddAlbumComponent
   }
 ];
