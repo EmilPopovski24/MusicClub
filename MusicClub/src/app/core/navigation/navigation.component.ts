@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoginComponent } from '../../user/login/login.component';
 import { RegisterComponent } from '../../user/register/register.component';
 import { Router, RouterModule } from '@angular/router';
+import { UserService } from '../../user/user.service';
 
 @Component({
   selector: 'app-navigation',
@@ -16,10 +17,14 @@ import { Router, RouterModule } from '@angular/router';
 })
 
 export class NavigationComponent {
-  constructor(private router:Router) {}
+  constructor(private router:Router, private userService:UserService) {}
 
   navigateTo(path:string):void {
     this.router.navigate([path])
+  }
+
+  logout(): void {
+    this.userService.logout();
   }
   }
   
