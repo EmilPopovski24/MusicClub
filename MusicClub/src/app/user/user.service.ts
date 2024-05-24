@@ -1,6 +1,8 @@
 import { Injectable, OnInit } from '@angular/core';
 import { User } from '../types/User';
 
+const USER_KEY = '[user]'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,10 +11,10 @@ export class UserService  {
 
   constructor() {
     try{
-      localStorage.getItem('user')
-
-    } catch(error) {
-
+      const lsUser = localStorage.getItem(USER_KEY) || ""
+      this.user = JSON.parse(lsUser)
+    } catch(error) {  
+      this.user = undefined
     }
   }
   
