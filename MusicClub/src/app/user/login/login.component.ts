@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -10,5 +11,9 @@ import { RouterModule } from '@angular/router';
 })
 
 export class LoginComponent {
-  
+  constructor(private userService: UserService) {}
+
+  login(email: string, password: string): void {
+    this.userService.login()
+  }
 }
