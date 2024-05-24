@@ -3,6 +3,7 @@ import { LoginComponent } from '../../user/login/login.component';
 import { RegisterComponent } from '../../user/register/register.component';
 import { Router, RouterModule } from '@angular/router';
 import { UserService } from '../../user/user.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -10,7 +11,8 @@ import { UserService } from '../../user/user.service';
   imports: [
     LoginComponent,
     RegisterComponent,
-    RouterModule
+    RouterModule,
+    CommonModule
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
@@ -25,6 +27,10 @@ export class NavigationComponent {
 
   logout(): void {
     this.userService.logout();
+  }
+
+  get isLogged(): boolean {
+  return this.userService.isLogged;
   }
   }
   

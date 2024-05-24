@@ -101,6 +101,30 @@
     }
   }
 
+  .logged {
+    list-style-type: none;
+    margin-left: auto;
+    display: none;
+    @media (min-width: 640px) {
+      display: flex;
+    }
+    li {
+      margin-left: 20px;
+    }
+  }
+
+  .notLogged {
+    list-style-type: none;
+    margin-left: auto;
+    display: none;
+    @media (min-width: 640px) {
+      display: flex;
+    }
+    li {
+      margin-left: 20px;
+    }
+  }
+
   /* .background-img {
     width: 100%;
     min-height: 200vh;
