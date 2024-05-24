@@ -8,6 +8,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { BackgroundComponent } from './core/background/background.component';
+import { CoreModule } from './core/core.module';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ import { BackgroundComponent } from './core/background/background.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent, 
-    // CoreModule,
+    CoreModule,
     BackgroundComponent
   ],
   templateUrl: './app.component.html',

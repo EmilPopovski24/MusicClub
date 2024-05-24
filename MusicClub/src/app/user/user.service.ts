@@ -6,13 +6,13 @@ import { User } from '../types/User';
 })
 
 export class UserService {
-  user: User | undefined
-  USER_KEY = '[user]'
+  user: User | undefined;
+  USER_KEY = '[user]';
   
-  isLogged():boolean {
+  get isLogged():boolean {
     // return true
-    return false
-    // return !!this.user
+    
+    return !!this.user
   }
 
   constructor() {
@@ -24,17 +24,17 @@ export class UserService {
     }
   }
 
-  login(): void {
+  login() :void {
     this.user = {
       email: 'john.doe@gmail.com',
-      username: "JohnDoe"
+      username: 'JohnDoe'
     }
 
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
     console.log(this.user.email)
   }
 
-  logout(): void {
+  logout() :void {
     this.user = undefined;
     localStorage.removeItem(this.USER_KEY)
   }
