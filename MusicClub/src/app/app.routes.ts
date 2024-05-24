@@ -43,7 +43,7 @@ export const routes: Routes = [
   {
     path: 'add-album',
     pathMatch: "full",
-    canActivate: [AuthActivate],
+    // canActivate: [AuthActivate],
     component: AddAlbumComponent
   }
 ];

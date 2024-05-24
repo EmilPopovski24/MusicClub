@@ -3,11 +3,11 @@
   <nav>
     <a href="/">Music Club</a>
     <ul class="list">
-      <div class="logged" *ngIf="isLogged">
-        <li (click)="logout()">Logout</li>
-        <li routerLink="catalog">Catalog</li>
+      <div class="logged" *ngIf="isLogged">   
         <li routerLink="addalbum">Add an Album</li>
+        <li routerLink="catalog">Catalog</li>
         <li routerLink="About">About</li> 
+        <li (click)="logout()">Logout</li>
       </div>
       <div class="notLogged" *ngIf="!isLogged">
         <li routerLink="user/login">Login</li>
