@@ -1,11 +1,10 @@
 import { Injectable, OnInit } from '@angular/core';
 import { User } from '../types/User';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService  {
   user: User | undefined
   USER_KEY = '[user]'
@@ -25,8 +24,8 @@ export class UserService  {
 
   login(): void {
     this.user = {
-      email: 'john.doe@gmail.com',
-      username: "JohnDoe"
+      email: 'john.doe@gmail.com'
+      // username: "JohnDoe"
     }
 
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
