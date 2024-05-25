@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+// import 'firebase/compat/auth';
+// import 'firebase/compat/firestore';
 import { Router } from '@angular/router';
 import { User } from '../types/User';
 import { HttpClient } from '@angular/common/http';
@@ -38,7 +38,6 @@ export class UserService implements OnDestroy {
 		return this.http.post<User>('/api/login', {username, password})
 		.pipe(tap((user) => this.user$$.next(user))); 
 	}
-
 	
 	getProfile() {
 		return this.http.get<User>('/api/users/profile')
