@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormsModule, NgForm } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { FormsModule, NgForm } from '@angular/forms';
+import { Router} from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../user.service';
@@ -15,25 +15,19 @@ import { UserService } from '../user.service';
 
 export class RegisterComponent {
 
-  // form = this.fb.group({
-  //   email: ['emailTest'],
-  //   username: ['usernameTest'],
-  //   passGroup: this.fb.group({
-  //     password:["pass"],
-  //     repassword:["pass"]
-  //   })
-  // })
+  constructor(private userService:UserService, private router:Router){
+  }
 
-  constructor(private userService: UserService, private router: Router) {}
-
-  register(form:NgForm) : void {
+  register(form:NgForm) {  
     if(form.invalid) {
       return;
-     }
+    }
+      const { email, username, password, repeatPassword} = form.value;
+    this.userService.register(email!, username!, password!, repeatPassword!).subscribe(()=>{
+      this.router.navigate(['/'])
+    })
 
-    console.log(form.value)
-
-   
-    this.router.navigate(['/'])
   }
 }
+
+
