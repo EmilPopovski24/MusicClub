@@ -15,15 +15,15 @@ import { UserService } from '../user.service';
 
 export class RegisterComponent {
 
-  constructor(private userService:UserService, private router:Router){
-  }
+  constructor(private userService:UserService, private router:Router) {}
 
   register(form:NgForm) {  
     if(form.invalid) {
       return;
     }
       const { email, username, password, repeatPassword} = form.value;
-      console.log(email, username, password, repeatPassword)
+      // console.log(form.value)
+
     this.userService.register(email!, username!, password!, repeatPassword!).subscribe(()=>{
       this.router.navigate(['/login'])
     })
