@@ -16,3 +16,5 @@ import { AppEmailDirective } from './validators/email.directive';
   ]
 })
 export class SharedModule { }
+
+export const EMAIL_DOMAINS = ["bg", "com", "net", "org"];

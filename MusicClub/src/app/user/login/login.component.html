@@ -7,7 +7,7 @@
       <h3>Login Here</h3>
 
       <label for="email">Email</label>
-      <input type="text" placeholder="Email" id="email" name="email" minlength="5" #inputEmail="ngModel" ngModel required [appEmail]="appEmailDomains">
+      <input type="text" placeholder="Email" id="email" name="email" minlength="5" #inputEmail="ngModel" ngModel required >
 
       <ng-container *ngIf="inputEmail.touched">
         <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required</p>
