@@ -6,29 +6,28 @@ import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 
-
 const routes: Routes = [
-  {
-    path: 'login',
-    component: LoginComponent
-    //canActivate: [AuthActivate]
-  }, 
-  {
-    path: 'user/register',
-    component: RegisterComponent
-  }, 
-  {
-    path: 'profile',
-    component: ProfileComponent
-    // canActivate: [AuthActivate]
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  //   //canActivate: [AuthActivate]
+  // }, 
+  // {
+  //   path: 'user/register',
+  //   component: RegisterComponent
+  // }, 
+  // {
+  //   path: 'profile',
+  //   component: ProfileComponent
+  //   // canActivate: [AuthActivate]
+  // },
 ];
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forChild(routes), 
+  imports: [RouterModule, //forChild(routes) 
     SharedModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [RouterModule]
 })

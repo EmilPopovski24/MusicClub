@@ -2,6 +2,7 @@
 // import { NgModule } from '@angular/core';
 // import { BrowserModule } from '@angular/platform-browser';
 // import { UserRoutingModule } from './user/user.module';
+// import { appInterceptorProvider } from './app.interceptor';
 
 // @NgModule({
 //   declarations: [],
@@ -10,7 +11,7 @@
 //     HttpClientModule,
 //     UserRoutingModule
 //   ],
-//   providers: [],
+//   providers: [appInterceptorProvider],
 //   bootstrap: []
 // })
 // export class AppModule { }

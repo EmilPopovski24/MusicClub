@@ -26,17 +26,17 @@ export const routes: Routes = [
     component: CatalogComponent
   }, 
   {
-    path: 'user/login',
+    path: 'login',
     pathMatch: "full",
     component: LoginComponent
   },
   {
-    path: 'user/register',
+    path: 'register',
     pathMatch: "full",
     component: RegisterComponent
   },
   {
-    path: 'user/profile',
+    path: 'profile',
     pathMatch: "full",
     canActivate: [AuthActivate],
     component: ProfileComponent
