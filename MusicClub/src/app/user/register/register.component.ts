@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -23,4 +23,7 @@ export class RegisterComponent {
 
   constructor(private fb:FormBuilder) {}
 
+  register() : void {
+    console.log(this.form.value)
+  }
 }
