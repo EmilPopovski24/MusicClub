@@ -23,6 +23,7 @@ export class RegisterComponent {
       return;
     }
       const { email, username, password, repeatPassword} = form.value;
+      console.log(email, username, password, repeatPassword)
     this.userService.register(email!, username!, password!, repeatPassword!).subscribe(()=>{
       this.router.navigate(['/login'])
     })
