@@ -24,7 +24,6 @@ export class LoginComponent {
    if(form.invalid) {
     return;
    }
-
     
     this.userService.login();
     this.router.navigate(['/'])
