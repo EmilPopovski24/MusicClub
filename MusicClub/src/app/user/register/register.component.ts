@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormsModule, NgForm } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -23,13 +24,16 @@ export class RegisterComponent {
   //   })
   // })
 
-  constructor() {}
+  constructor(private userService: UserService, private router: Router) {}
 
   register(form:NgForm) : void {
     if(form.invalid) {
       return;
      }
-     
+
     console.log(form.value)
+
+   
+    this.router.navigate(['/'])
   }
 }
