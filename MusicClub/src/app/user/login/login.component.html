@@ -3,16 +3,20 @@
       <div class="shape"></div>
       <div class="shape"></div>
   </div> -->
-  <form>
+  <form #form="ngForm" (ngSubmit)="login(form)">
       <h3>Login Here</h3>
 
       <label for="email">Email</label>
-      <input type="text" placeholder="Email" id="email" #inputEmail>
+      <input type="text" placeholder="Email" id="email" name="email" minlength="5" #inputEmail="ngModel" ngModel required>
+
+      <ng-container *ngIf="inputEmail.touched">
+        <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required</p>
+      </ng-container>
 
       <label for="password">Password</label>
-      <input type="password" placeholder="Password" id="password" #inputPassword>
+      <input type="password" placeholder="Password" id="password" name="password" #inputPassword="ngModel" ngModel required>
 
-      <button class="auth-btn" (click)="login(inputEmail.value, inputPassword.value)">Login</button>
+      <button class="auth-btn">Login</button>
       <div class="reg-link">
         If you don't have an account, please go to the <a href="user/register">Registration form</a>
       </div>
@@ -22,7 +26,6 @@
       <!-- </div> -->
   </form>
 </body>
-
 
 
 <!-- <form action="action_page.php" method="post">
