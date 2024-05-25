@@ -3,7 +3,7 @@
       <div class="shape"></div>
       <div class="shape"></div>
   </div> -->
-  <form formGroup="form" (ngSubmit)="register()">
+  <form #form="ngForm" (ngSubmit)="register(form)">
       <h3>SignUp Here</h3>
 
       <label for="username">Username</label>
