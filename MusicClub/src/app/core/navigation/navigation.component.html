@@ -6,13 +6,13 @@
       <div class="logged" *ngIf="isLogged">   
         <li routerLink="add-album">Add an Album</li>
         <li routerLink="catalog">Catalog</li>
-        <li routerLink="About">About</li> 
         <li (click)="logout()">Logout</li>
       </div>
       <div class="notLogged" *ngIf="!isLogged">
         <li routerLink="user/login">Login</li>
         <li routerLink="user/register">Register</li>
       </div>
+      <li routerLink="about">About</li> 
     </ul>
   </nav>
 </div>

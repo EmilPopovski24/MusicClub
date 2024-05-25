@@ -6,6 +6,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { AddAlbumComponent } from './add-album/add-album.component';
 import { AuthActivate } from './core/guards/auth.activate';
+import { AboutComponent } from './about/about.component';
 
 
 export const routes: Routes = [
@@ -45,5 +46,11 @@ export const routes: Routes = [
     pathMatch: "full",
     canActivate: [AuthActivate],
     component: AddAlbumComponent
+  },
+  {
+    path: 'about',
+    pathMatch: "full",
+    component: AboutComponent
   }
+
 ];
