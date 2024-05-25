@@ -14,19 +14,17 @@ import { CommonModule } from "@angular/common";
 })
 
 export class LoginComponent{
-        emailDomains = EMAIL_DOMAINS;
   
+        emailDomains = EMAIL_DOMAINS
 
 constructor(private userService:UserService, private router:Router) {}
-
- 
 
       login(form:NgForm) {
         if(form.invalid) {
           return;
         }
-        const { username, password } = form.value     
-        this.userService.login(username, password).subscribe(()=>{
+        const { email, password } = form.value     
+        this.userService.login(email, password).subscribe(()=>{
           this.router.navigate(['/'])
         })
   }  
