@@ -9,7 +9,6 @@ import { AppEmailDirective } from './validators/email.directive';
   imports: [
     CommonModule, 
     SpinnerComponent,
-    
   ],
   exports: [
     SpinnerComponent,

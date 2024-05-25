@@ -14,9 +14,17 @@
       </ng-container>
 
       <label for="password">Password</label>
-      <input type="password" placeholder="Password" id="password" name="password" #inputPassword="ngModel" ngModel required>
+      <input type="password" placeholder="Password" id="password" name="password" #inputPassword="ngModel" minlength="2" ngModel required>
 
-      <button class="auth-btn">Login</button>
+      <ng-container *ngIf="inputPassword.touched">
+        <p class = "error" *ngIf="inputPassword.errors?.['required']">Password is required</p>
+        <p class="error" *ngIf="inputPassword.errors?.['minlength']">
+              Password must be at least
+              {{inputPassword.errors?.['minlength']['requiredLength']}} characters!
+            </p>
+      </ng-container>  
+
+      <button class="auth-btn" [disabled]="form.invalid">Login</button>
       <div class="reg-link">
         If you don't have an account, please go to the <a href="user/register">Registration form</a>
       </div>

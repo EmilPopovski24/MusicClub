@@ -21,7 +21,9 @@ export class LoginComponent {
   constructor(private userService: UserService, private router: Router) {}
 
   login(form: NgForm): void {
-    console.log(form.value);
+   if(form.invalid) {
+    return;
+   }
 
     
     this.userService.login();
