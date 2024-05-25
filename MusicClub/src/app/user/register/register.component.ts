@@ -15,8 +15,10 @@ export class RegisterComponent {
   form = this.fb.group({
     email: ['emailTest'],
     username: ['usernameTest'],
-    password:['pass'],
-    repassword: ['pass'],
+    passGroup: this.fb.group({
+      password:["pass"],
+      repassword:["pass"]
+    })
   })
 
   constructor(private fb:FormBuilder) {}
