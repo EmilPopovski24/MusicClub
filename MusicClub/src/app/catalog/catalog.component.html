@@ -1,1 +1,35 @@
-<p>catalog works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div *ngIf="noAlbums">
+        <h2>There are no books.</h2>
+    </div>
+    
+      
+    <div *ngFor="let album of albumsList" >
+    <div class="albumCard">
+        <div class="img-container">
+            <a [routerLink]="album._id" class="normal">
+            <img src="{{ album.coverUrl }}" alt="Avatar" ></a>
+        </div>
+        <div class="container">
+            <h3><b>{{ album.name }}</b></h3>
+            <h4>Artist: {{ album.artist }}</h4>
+            <h5>Released: {{ album.released }}</h5>
+            <div class="description">
+                <p><b>Labek:</b> {{album.label}}</p>
+            </div>
+        </div>
+        <div class="details">
+            <button >Details</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

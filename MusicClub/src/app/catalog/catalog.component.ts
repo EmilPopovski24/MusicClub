@@ -12,9 +12,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './catalog.component.css'
 })
 export class CatalogComponent implements OnInit{
+  // album: Album
   noAlbums: boolean = false;
 	albumsList: Album[] = [];
-  
+
 	constructor(private apiService:ApiService) {}
 
 	ngOnInit(): void {
