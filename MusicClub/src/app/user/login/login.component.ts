@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from "@angular/forms";
 import { Component } from "@angular/core";
 import { EMAIL_DOMAINS, SharedModule } from "../../shared/shared.module";
 import { CommonModule } from "@angular/common";
+import { environment } from "../../../environments/environment";
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ import { CommonModule } from "@angular/common";
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
+
 
 export class LoginComponent{
   

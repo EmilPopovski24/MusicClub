@@ -25,7 +25,7 @@ import { AboutComponent } from './about/about.component';
     ProfileComponent, 
     CoreModule,
     BackgroundComponent,
-    AboutComponent
+    AboutComponent, 
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
