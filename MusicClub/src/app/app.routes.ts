@@ -38,13 +38,13 @@ export const routes: Routes = [
   {
     path: 'profile',
     pathMatch: "full",
-    canActivate: [AuthActivate],
+    // canActivate: [AuthActivate],
     component: ProfileComponent
   },
   {
     path: 'add-album',
     pathMatch: "full",
-    canActivate: [AuthActivate],
+    // canActivate: [AuthActivate],
     component: AddAlbumComponent
   },
   {
