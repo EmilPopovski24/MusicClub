@@ -27,7 +27,8 @@ export class NavigationComponent {
 
   logout(): void {
     // console.log("void")
-    this.userService.logout();
+    this.userService.logout().subscribe(() => 
+    this.router.navigate(['/login']));
   }
 
   get isLogged(): boolean {
