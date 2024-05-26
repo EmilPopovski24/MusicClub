@@ -21,10 +21,10 @@ export class RegisterComponent {
     if(form.invalid) {
       return;
     }
-      const { email, username, password, repeatPassword} = form.value;
+      const { username, email , password, repeatPassword} = form.value;
       // console.log(form.value)
 
-    this.userService.register(email!, username!, password!, repeatPassword!).subscribe(()=>{
+    this.userService.register(username!, email!, password!, repeatPassword!).subscribe(()=>{
       this.router.navigate(['/login'])
     })
 
