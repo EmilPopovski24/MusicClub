@@ -1,7 +1,43 @@
 <body>
     <div class="card">
-        <img src="/assets/generic-profile-pic.jpg" alt="John" style="width:100%">
-        <h1>John Doe</h1>
+        <ng-container>
+            <img src="/assets/generic-profile-pic.jpg" alt="John" style="width:100%">
+        </ng-container>
+        <ng-container *ngIf="!isEditMode">
+            <form class="profile-readonly" >              
+                <div>
+                    <h3>Username: {{profileDetails.username}}</h3>                 
+                </div>
+                <div>
+                    <p class="email">Email: {{profileDetails.email}}</p>
+                    
+                </div>
+                <p>Addicted Reader</p>
+        <button class="editButton" (click)="toggleEditMode()">Edit</button>
+        <button routerLink="/profile/my-books">My Music</button>
+    </form>
+        </ng-container>
+        <ng-container *ngIf="isEditMode">
+        <form class="profile" #form="ngForm" (ngSubmit)="saveProfileHandler(form)">
+            <div>
+                <h3>Username: <input type="text" id="username" name="username" formControlName="username" > </h3>
+            </div>
+            <div>
+                <p class="email">Email: <input type="text" id="email" name="email" formControlName="email"></p> 
+            </div>
+        <p>Addicted Music Fan</p>
+        <button class="saveButton">Save</button>       
+        </form>
+        </ng-container>
+    </div> 
+</body>
+
+
+
+<!-- <body>
+    <div class="card">
+        <img src="/assets/generic-profile-pic.jpg" alt="pic" style="width:100%">
+        <h1>{{ user.username }}</h1>
         <p class="title">CEO & Founder, Example</p>
         <p>Harvard University</p>
         <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -10,4 +46,4 @@
         <a href="#"><i class="fa fa-facebook"></i></a>
         <p><button>Contact</button></p>
     </div>
-</body>
+</body> -->
