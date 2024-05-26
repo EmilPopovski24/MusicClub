@@ -19,7 +19,7 @@ export class AppInterceptor implements HttpInterceptor {
          Observable<HttpEvent<any>> {
             if(req.url.startsWith('/api')) {
                 req = req.clone({
-                    url: req.url.replace(`/api`, `${apiUrl}/users`), 
+                    url: req.url.replace(`/api`, `${apiUrl}`), 
                     withCredentials: true, //for cookie setup
          })} ;
          return next.handle(req).pipe(
