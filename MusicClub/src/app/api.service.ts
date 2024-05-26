@@ -19,7 +19,7 @@ export class ApiService {
     }
 
     getAlbums() {
-        const musicUrl = environment.musicUrl;
+        const {musicUrl} = environment;
         return this.http.get<Album[]>(`${musicUrl}/.json`);
   }
 
