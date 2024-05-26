@@ -50,7 +50,7 @@ export class UserService implements OnDestroy
 	}
 
 	logout() {
-		return this.http.post<User>('/users/logout', {})
+		return this.http.post<User>('http://localhost:3000/api/logout', {})
 		.pipe(tap(()=> this.user$$.next(undefined)))
 	}
 
