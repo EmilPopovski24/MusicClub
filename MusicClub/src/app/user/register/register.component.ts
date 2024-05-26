@@ -25,7 +25,7 @@ export class RegisterComponent {
       // console.log(form.value)
 
     this.userService.register(username!, email!, password!, repeatPassword!).subscribe(()=>{
-      this.router.navigate(['/login'])
+      this.router.navigate(['/catalog'])
     })
 
   }

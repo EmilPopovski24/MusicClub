@@ -8,7 +8,9 @@ import { ErrorService } from "./core/error/error.service";
 
 const { apiUrl } = environment;
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class AppInterceptor implements HttpInterceptor {
     
     constructor(private router:Router, private errorService:ErrorService) {}

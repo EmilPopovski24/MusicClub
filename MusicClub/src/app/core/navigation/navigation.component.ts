@@ -26,6 +26,7 @@ export class NavigationComponent {
   }
 
   logout(): void {
+    // console.log("void")
     this.userService.logout();
   }
 
