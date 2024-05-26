@@ -14,6 +14,7 @@ export class UserService implements OnDestroy
 	private user$$ = new BehaviorSubject<User | undefined>(undefined)
 	public user$ = this.user$$.asObservable();
 	user: User|undefined;
+	
 	get isLogged():boolean {
 		// return true
 		return !!this.user
@@ -30,12 +31,12 @@ export class UserService implements OnDestroy
 	
 	register( username:string, email:string, password:string, repeatPassword:string) {
 		console.log(username, email, password, repeatPassword )
-		return this.http.post<User>('http://localhost:3000/api/register', {username, email, password, repeatPassword})
+		return this.http.post<User>('/users/register', {username, email, password, repeatPassword})
 		.pipe(tap((user) => this.user$$.next(user)))
 	}
 
 	login(email:string, password:string) {	
-		return this.http.post<User>('http://localhost:3000/api/login', {email, password})
+		return this.http.post<User>('/users/login', {email, password})
 		.pipe(tap((user) => this.user$$.next(user))); 
 	}
 	
@@ -50,7 +51,7 @@ export class UserService implements OnDestroy
 	}
 
 	logout() {
-		return this.http.post<User>('http://localhost:3000/api/logout', {})
+		return this.http.post<User>('/users/logout', {})
 		.pipe(tap(()=> this.user$$.next(undefined)))
 	}
 
