@@ -40,5 +40,5 @@ export class AppInterceptor implements HttpInterceptor {
 export const appInterceptorProvider: Provider = {
     multi: true,
     useClass: AppInterceptor,
-    provide: HTTP_INTERCEPTORS,
+    provide: HTTP_INTERCEPTORS
 }

@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 import { appInterceptorProvider } from './app.interceptor';
 
 export const appConfig: ApplicationConfig = {
-  providers: [appInterceptorProvider]
+  providers: [provideRouter(routes), [appInterceptorProvider]]
 };
 
 
