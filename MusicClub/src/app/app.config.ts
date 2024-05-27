@@ -6,13 +6,16 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptors } from '@angular
 import { AppInterceptor, appInterceptorProvider } from './app.interceptor';
 
 
+
+
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(withInterceptors({
-    provide: HTTP_INTERCEPTORS,
+  providers: [provideRouter(routes), provideHttpClient(withInterceptors([{
     multi: true,
     useClass: AppInterceptor,
-    
-  }))]
+    provide: HTTP_INTERCEPTORS}
+  ]))]
 };
+
+
 
 // ,provideClientHydration
