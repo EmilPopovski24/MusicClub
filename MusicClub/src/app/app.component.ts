@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { BackgroundComponent } from './core/background/background.component';
 import { CoreModule } from './core/core.module';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { AboutComponent } from './about/about.component';
     CoreModule,
     BackgroundComponent,
     AboutComponent, 
+    HttpClientModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
