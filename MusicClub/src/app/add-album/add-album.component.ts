@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-add-album',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule, SharedModule],
   templateUrl: './add-album.component.html',
   styleUrl: './add-album.component.css'
 })
