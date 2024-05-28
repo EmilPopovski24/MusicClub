@@ -1,5 +1,6 @@
 <body>
-    <form>
+    <form #form="ngForm" (ngSubmit)="addAlbum(form)">
+        
         <h3>Add Your Favourite Album</h3>
   
         <label for="artist">Artist</label>

@@ -14,14 +14,14 @@ import { NgForm } from '@angular/forms';
 export class AddAlbumComponent {
   constructor(private apiService:ApiService, private router:Router) {}
   
-  newBookSubmitHandler(form: NgForm):void {
+  addAlbum(form: NgForm):void {
     if(form.invalid) {
       return;
     }
     const { artist,name,released ,genre, label, singles, coverUrl} = form.value;
     
     this.apiService.addAlbum(artist!, name!, released!, genre!, label!, singles!, coverUrl!).subscribe(() => {
-      
+      console.log(form.value)
       this.router.navigate(['/catalog'])
       
     });
