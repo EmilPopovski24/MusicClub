@@ -14,7 +14,7 @@ import { NgForm } from '@angular/forms';
 export class AddAlbumComponent {
   constructor(private apiService:ApiService, private router:Router) {}
   
-  addAlbum(form: NgForm):void {
+  addAlbum(form: NgForm): void {
     if(form.invalid) {
       return;
     }
