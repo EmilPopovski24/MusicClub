@@ -25,7 +25,6 @@ export class AddAlbumComponent {
     this.apiService.addAlbum(artist!, name!, released!, genre!, label!, singles!, coverUrl!).subscribe(() => {
       console.log(form.value)
       this.router.navigate(['/catalog'])
-      
     });
   }
 }
