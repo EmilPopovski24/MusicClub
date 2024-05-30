@@ -8,9 +8,8 @@ import { environment } from '../environments/environment';
     providedIn: 'root'
 })
 export class ApiService {
-    // musicUrl = environment.musicUrl;
-    // apiUrl = environment.apiUrl;
-    constructor( private http: HttpClient) { }
+
+  constructor( private http: HttpClient) { }
   album : Album | undefined ;
 
     getAlbum(id:string) {
