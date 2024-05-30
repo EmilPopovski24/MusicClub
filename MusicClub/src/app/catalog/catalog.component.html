@@ -6,11 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-
     <div *ngIf="noAlbums">
         <h2>There are no books.</h2>
-    </div>
-    
+    </div>  
     <div *ngFor="let album of albumsList" >
     <div class="albumCard">
         <div class="img-container">
@@ -26,7 +24,7 @@
             </div>
         </div>
         <div class="details">
-            <button >Details</button>
+            <button >More Details</button>
         </div>
     </div>
 </div>
