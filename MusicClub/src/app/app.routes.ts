@@ -8,7 +8,6 @@ import { AddAlbumComponent } from './add-album/add-album.component';
 import { AuthActivate } from './core/guards/auth.activate';
 import { AboutComponent } from './about/about.component';
 
-
 export const routes: Routes = [
   {
     path: '',
