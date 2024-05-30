@@ -1,6 +1,5 @@
 <body>
     <form #form="ngForm" (ngSubmit)="addAlbum(form)">
-
         <h3>Add Your Favourite Album</h3>
   
         <label for="artist">Artist</label>
@@ -24,7 +23,6 @@
         <label for="image">Album Cover</label>
         <input type="imageUrl" placeholder="Image URL..." id="imageUrl" alt="Album-cover">
 
-  
         <button class="add-btn" [disabled]="form.invalid">Add</button>
 
     </form>
