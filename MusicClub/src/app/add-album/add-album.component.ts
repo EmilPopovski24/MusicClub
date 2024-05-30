@@ -20,6 +20,7 @@ export class AddAlbumComponent {
     if(form.invalid) {
       return;
     }
+    
     const { artist,name,released ,genre, label, singles, coverUrl} = form.value;
     
     this.apiService.addAlbum(artist, name, released, genre, label, singles, coverUrl).subscribe(() => {
