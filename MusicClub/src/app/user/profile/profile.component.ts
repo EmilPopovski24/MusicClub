@@ -60,8 +60,5 @@ saveProfileHandler(form: NgForm) :void {
     this.userService.updateProfile(username!, email!).subscribe(()=> {
     this.toggleEditMode();
 });
-
 }
-
-
 }
