@@ -7,20 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  // {
-  //   path: 'login',
-  //   component: LoginComponent
-  //   //canActivate: [AuthActivate]
-  // }, 
-  // {
-  //   path: 'user/register',
-  //   component: RegisterComponent
-  // }, 
-  // {
-  //   path: 'profile',
-  //   component: ProfileComponent
-  //   // canActivate: [AuthActivate]
-  // },
+
 ];
 
 @NgModule({
