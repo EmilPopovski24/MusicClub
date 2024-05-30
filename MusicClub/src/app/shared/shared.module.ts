@@ -6,14 +6,8 @@ import { AppEmailDirective } from './validators/email.directive';
 
 @NgModule({
   declarations: [AppEmailDirective],
-  imports: [
-    CommonModule, 
-    SpinnerComponent,
-  ],
-  exports: [
-    SpinnerComponent,
-    AppEmailDirective
-  ]
+  imports: [CommonModule, SpinnerComponent],
+  exports: [SpinnerComponent, AppEmailDirective]
 })
 export class SharedModule { }
 
