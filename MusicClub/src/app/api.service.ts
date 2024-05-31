@@ -23,8 +23,8 @@ export class ApiService {
         return this.http.get<Album[]>(`${musicUrl}/.json`);
   }
 
-    addAlbum(artist: string, name: string, released: string, genre: string, label: string, singles: string, coverUrl: string) {
+    addAlbum(artist: string, name: string, released: string, genre: string, label: string, singles: string, coverUrl: string, _id: string, owner: string) {
       const musicUrl  = environment.musicUrl
-        return this.http.post<Album[]>(`${musicUrl}/.json`,{artist ,name, released, genre, label, singles, coverUrl})
+        return this.http.post<Album[]>(`${musicUrl}/.json`,{artist ,name, released, genre, label, singles, coverUrl, _id, owner})
     }
   }

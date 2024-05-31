@@ -22,10 +22,9 @@ export class AddAlbumComponent {
       return;
     }
     
-    const { artist, name, released ,genre, label, singles, coverUrl} = form.value;
+    const { artist, name, released ,genre, label, singles, coverUrl, _id, owner} = form.value;
     
-    this.apiService.addAlbum(artist, name, released, genre, label, singles, coverUrl).subscribe(() => {
-      console.log(artist)
+    this.apiService.addAlbum(artist, name, released, genre, label, singles, coverUrl, _id, owner).subscribe(() => {
       this.router.navigate(['/catalog'])
     });
   }
