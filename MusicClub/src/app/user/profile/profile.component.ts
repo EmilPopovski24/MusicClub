@@ -4,6 +4,8 @@ import { FormBuilder, FormsModule, NgForm, Validators } from '@angular/forms';
 import { appEmailValidator } from '../../shared/validators/email-validator';
 import { EMAIL_DOMAINS } from '../../shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { CoreModule } from '../../core/core.module';
 
 
 interface Profile {
@@ -14,7 +16,7 @@ interface Profile {
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, CoreModule],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
