@@ -55,7 +55,7 @@ body {
 }
 
 .albumCard {
-    
+    color: white;
     flex: 1 1 1 1 1;
     margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -70,6 +70,7 @@ body {
   img {
     border-radius: 5px 5px 0 0;
     height:500px;
+    cursor: pointer;
   }
 
   .description {
@@ -85,4 +86,13 @@ body {
   .container {
     padding: 2px 16px;
     text-align: center;
+  }
+
+  .details-btn {
+    padding: 5px;
+    border: none;
+    border-radius: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
   }

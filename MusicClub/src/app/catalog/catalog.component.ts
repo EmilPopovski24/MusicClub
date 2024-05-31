@@ -14,7 +14,7 @@ import { CoreModule } from '../core/core.module';
 })
 export class CatalogComponent implements OnInit{
 
-  noAlbums: boolean = true;
+  noAlbums: boolean = false;
 	albumsList: Album[] = [];
 
 	constructor(private apiService:ApiService) {}
