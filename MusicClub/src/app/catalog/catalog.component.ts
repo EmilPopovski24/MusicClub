@@ -4,6 +4,7 @@ import { ApiService } from '../api.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-catalog',
@@ -17,12 +18,16 @@ export class CatalogComponent implements OnInit{
   noAlbums: boolean = false;
 	albumsList: Album[] = [];
 
-	constructor(private apiService:ApiService) {}
+	constructor(private apiService:ApiService, private userService: UserService) {}
 
 	ngOnInit(): void {
 		
 		this.apiService.getAlbums().subscribe({next:(albumsList) => {
 		this.albumsList = Object.values(albumsList)}})		
 	}
+  
+  get isLogged(): boolean {
+    return this.userService.isLogged;
+    }
 
 }

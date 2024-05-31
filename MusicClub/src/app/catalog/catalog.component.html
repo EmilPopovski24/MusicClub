@@ -23,7 +23,7 @@
                 <p><b>Label:</b> {{album.label}}</p>
             </div>
         </div>
-        <div class="details">
+        <div class="details" *ngIf="isLogged">
             <button class="details-btn" routerLink="${id}">Details</button>
         </div>
     </div>
