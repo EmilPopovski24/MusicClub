@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './catalog.component.css'
 })
 export class CatalogComponent implements OnInit{
-  // album: Album
-  noAlbums: boolean = false;
+
+  noAlbums: boolean = true;
 	albumsList: Album[] = [];
 
 	constructor(private apiService:ApiService) {}

@@ -3,25 +3,25 @@
         <h3>Add Your Favourite Album</h3>
   
         <label for="artist">Artist</label>
-        <input type="text" placeholder="Artist/Group..." id="artist">
+        <input type="text" placeholder="Artist/Group..." id="artist" ngModel>
   
         <label for="album-name">Album Name</label>
-        <input type="text" placeholder="Album name..." id="album-name">
+        <input type="text" placeholder="Album name..." id="album-name" ngModel>
   
         <label for="release-year">Released On</label>
-        <input type="text" placeholder="Release year..." id="release-year">
+        <input type="text" placeholder="Release year..." id="release-year" ngModel>
 
         <label for="genre">Genre</label>
-        <input type="genre" placeholder="Genre..." id="genre">
+        <input type="genre" placeholder="Genre..." id="genre" ngModel>
 
         <label for="label-name">Label</label>
-        <input type="text" placeholder="Label name..." id="label-name">
+        <input type="text" placeholder="Label name..." id="label-name" ngModel>
   
         <label for="singles">Notable Singles</label>
-        <input type="text" placeholder="Singles..." id="singles">
+        <input type="text" placeholder="Singles..." id="singles" ngModel>
 
         <label for="image">Album Cover</label>
-        <input type="imageUrl" placeholder="Image URL..." id="imageUrl" alt="Album-cover">
+        <input type="imageUrl" placeholder="Image URL..." id="imageUrl" alt="Album-cover" ngModel>
 
         <button class="add-btn" [disabled]="form.invalid">Add</button>
 
