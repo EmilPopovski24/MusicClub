@@ -35,7 +35,6 @@ export const routes: Routes = [
         component: DetailsComponent
       }
     ]
-  
   }, 
   {
     path: 'login',
@@ -64,6 +63,4 @@ export const routes: Routes = [
     pathMatch: "full",
     component: AboutComponent
   },
-  
-
 ];
