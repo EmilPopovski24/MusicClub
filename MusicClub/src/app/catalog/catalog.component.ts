@@ -3,11 +3,12 @@ import { Album } from '../types/Album';
 import { ApiService } from '../api.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CoreModule } from '../core/core.module';
 
 @Component({
   selector: 'app-catalog',
   standalone: true,
-  imports: [CommonModule, RouterModule, ],
+  imports: [CommonModule, RouterModule, CoreModule],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
