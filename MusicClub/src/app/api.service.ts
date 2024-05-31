@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 export class ApiService {
 
   constructor( private http: HttpClient) { }
-  album : Album | undefined ;
+  album : Album ;
 
     getAlbum(id:string) {
       const { apiUrl } = environment;
