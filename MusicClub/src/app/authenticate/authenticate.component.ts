@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-authenticate',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.css']
 })
