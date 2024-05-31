@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { DetailsComponent } from './details/details.component';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
     BackgroundComponent,
     AboutComponent, 
     HttpClientModule,
-    AuthenticateComponent
+    AuthenticateComponent, 
+    DetailsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
