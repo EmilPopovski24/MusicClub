@@ -29,7 +29,7 @@ export const routes: Routes = [
         component: CatalogComponent
       },
       {
-        path: ':albumId',
+        path: ':name',
         pathMatch: "full",
         canActivate: [AuthActivate],
         component: DetailsComponent

@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="details" *ngIf="isLogged">
-            <button class="details-btn" routerLink="${id}">Details</button>
+            <button class="details-btn" [routerLink]="[album.name]">Details</button>
         </div>
     </div>
 </div>
