@@ -16,10 +16,10 @@ export class DetailsComponent {
 
   constructor(private apiService:ApiService, private router: Router) { }
 
-  getAlbumDetails() {
-    this.apiService.getAlbum(name).subscribe(()=> 
-      this.router.navigate([`/catalog/${name}`]))
-  }
+  // getAlbumDetails() {
+  //   this.apiService.getAlbum(id).subscribe(()=> 
+  //     this.router.navigate([`/catalog/${}`]))
+  // }
 
       
     
