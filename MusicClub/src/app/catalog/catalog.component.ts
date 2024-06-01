@@ -22,9 +22,7 @@ export class CatalogComponent implements OnInit{
 
 	ngOnInit(): void {
 		
-		this.apiService.getAlbums().snapshotChanges().forEach(userSnapshot => {
-      let album
-    }).subscribe({next:(albumsList) => {
+		this.apiService.getAlbums().subscribe({next:(albumsList) => {
 		this.albumsList = Object.values(albumsList)}})		
 	}
   
