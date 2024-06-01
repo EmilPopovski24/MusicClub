@@ -12,19 +12,20 @@
     <div *ngFor="let album of albumsList" >
     <div class="albumCard">
         <div class="img-container">
-            <a [routerLink]="album._id" class="normal">
+            <a [routerLink]="album.id" class="normal">
             <img src="{{ album.coverUrl }}" alt="Avatar" ></a>
         </div>
         <div class="container">
             <h3><b>{{ album.name }}</b></h3>
             <h3>Artist: {{ album.artist }}</h3>
             <h3>Released: {{ album.released }}</h3>
+            <h3>ID : {{album.id}}</h3>
             <div class="description">
                 <p><b>Label:</b> {{album.label}}</p>
             </div>
         </div>
         <div class="details" *ngIf="isLogged">
-            <button class="details-btn" [routerLink]="[album.name]">Details</button>
+            <button class="details-btn" [routerLink]="[album.id]">Details</button>
         </div>
     </div>
 </div>

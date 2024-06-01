@@ -6,6 +6,6 @@ export interface Album {
     label: string;
     singles: string;
     coverUrl: string;
-    _id: string;
+    id: string;
     owner: string;
 }
