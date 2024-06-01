@@ -12,9 +12,9 @@ export class ApiService {
   constructor( private http: HttpClient) {}
   album : Album | undefined ;
 
-    getAlbum(id:string) {
+    getAlbum(name:string) {
       const { apiUrl } = environment;
-      return this.http.get<Album>(`${apiUrl}/${id}`);
+      return this.http.get<Album>(`${apiUrl}/${name}`);
     }
 
     getAlbums() {
