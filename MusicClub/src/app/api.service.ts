@@ -19,7 +19,6 @@ export class ApiService {
 
     getAlbums() {
         const musicUrl  = environment.musicUrl
-        // console.log(musicUrl)
         return this.http.get<Album[]>(`${musicUrl}/.json`);
   }
 
