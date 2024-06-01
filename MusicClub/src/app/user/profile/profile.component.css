@@ -37,3 +37,7 @@
   button:hover, a:hover {
     opacity: 0.7;
   }
+
+  .userinfo {
+    color:white;
+  }

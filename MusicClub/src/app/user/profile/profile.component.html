@@ -6,10 +6,10 @@
         <ng-container *ngIf="!isEditMode">
             <form class="profile-readonly" >              
                 <div>
-                    <h3>Username:{{profileDetails.username}}</h3>                 
+                    <h3 class="userinfo">Username:{{profileDetails.username}}</h3>                 
                 </div>
                 <div>
-                    <p class="email">Email:{{profileDetails.email}}</p>                 
+                    <p class="userinfo">Email:{{profileDetails.email}}</p>                 
                 </div>
                 <p>Addicted Music Fan</p>
         <button class="editButton" (click)="toggleEditMode()">Edit</button>
@@ -19,10 +19,10 @@
         <ng-container *ngIf="isEditMode">
         <form class="profile" #form="ngForm" (ngSubmit)="saveProfileHandler(form)">
             <div>
-                <h3>Username:<input type="text" id="username" name="username" formControlName="username" > </h3>
+                <h3 class="userinfo">Username:<input type="text" id="username" name="username" formControlName="username" > </h3>
             </div>
             <div>
-                <p class="email">Email:<input type="text" id="email" name="email" formControlName="email"></p> 
+                <p class="userinfo">Email:<input type="text" id="email" name="email" formControlName="email"></p> 
             </div>
         <p>Addicted Music Fan</p>
         <button class="saveButton">Save</button>       
