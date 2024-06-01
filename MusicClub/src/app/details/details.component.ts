@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { Album } from '../types/Album';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-details',
@@ -12,6 +13,19 @@ import { Album } from '../types/Album';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
-  album: Album | undefined;
- 
+
+  constructor(private apiService:ApiService, private router: Router) { }
+
+  getAlbumDetails() {
+    this.apiService.getAlbum(name).subscribe(()=> 
+      this.router.navigate([`/catalog/${name}`]))
+  }
+
+      
+    
+
+
+
 }
+
+
