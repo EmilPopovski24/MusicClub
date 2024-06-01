@@ -72,12 +72,14 @@ border: none;
 form h3{
 font-size: 26px;
 font-weight: 500;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 line-height: 42px;
 text-align: center;
 }
 
 label{
 display: block;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 margin-top: 15px;
 font-size: 14px;
 font-weight: 500;
