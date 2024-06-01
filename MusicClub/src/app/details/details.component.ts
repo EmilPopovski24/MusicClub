@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
-import { UserService } from '../user/user.service';
+import { Album } from '../types/Album';
 
 @Component({
   selector: 'app-details',
@@ -12,11 +12,6 @@ import { UserService } from '../user/user.service';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
-
-  constructor( private userService: UserService) {
-    
-  }
-  get isLogged(): boolean {
-    return this.userService.isLogged;
-    }
+  album: Album | undefined;
+ 
 }
