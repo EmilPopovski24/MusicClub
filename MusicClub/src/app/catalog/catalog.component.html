@@ -10,12 +10,12 @@
             <img src="{{ album.coverUrl }}" alt="Avatar" ></a>
         </div>
         <div class="container">
-            <h3><b>{{ album.name }}</b></h3>
-            <h3>Artist: {{ album.artist }}</h3>
-            <h3>Released: {{ album.released }}</h3>
-            <h3>ID : {{album.id}}</h3>
+            <h5><b>{{ album.name }}</b></h5>
+            <h5>{{ album.artist }}</h5>
+            <h5>Released: {{ album.released }}</h5>
+            <h5>ID : {{album.id}}</h5>
             <div class="description">
-                <p><b>Label:</b> {{album.label}}</p>
+                <p>Label: {{album.label}}</p>
             </div>
         </div>
         <div class="details" *ngIf="isLogged">
