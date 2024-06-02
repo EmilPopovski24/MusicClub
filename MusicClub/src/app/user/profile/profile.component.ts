@@ -44,7 +44,7 @@ form = this.fb.group({
         })
     }
 
-toggleEditMode():void {
+toggleEditMode(): void {
     this.isEditMode = !this.isEditMode
 }
 
