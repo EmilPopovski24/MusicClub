@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
 import { UserService } from '../user/user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-catalog',
@@ -14,14 +15,12 @@ import { UserService } from '../user/user.service';
   styleUrl: './catalog.component.css'
 })
 export class CatalogComponent implements OnInit{
-
   noAlbums: boolean = false;
 	albumsList: Album[] = [];
 
-	constructor(private apiService:ApiService, private userService: UserService) {}
+	constructor(private apiService:ApiService, private userService: UserService, private router:RouterModule) {}
 
 	ngOnInit(): void {
-		
 		this.apiService.getAlbums().subscribe({next:(albumsList) => {
 		this.albumsList = Object.values(albumsList)}})		
 	}
@@ -29,5 +28,7 @@ export class CatalogComponent implements OnInit{
   get isLogged(): boolean {
     return this.userService.isLogged;
     }
+
+
 
 }
