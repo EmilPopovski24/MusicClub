@@ -1,6 +1,5 @@
 <body>
     <div class="card">
-        
         <ng-container *ngIf="!isEditMode">
             <form class="profile-readonly" >              
                 <div>
@@ -11,7 +10,7 @@
                 </div>
                 <p class="userinfo">Addicted Music Fan</p>
         <button class="editButton" (click)="toggleEditMode()">Edit</button>
-        <button routerLink="/profile/my-books">My Music</button>
+        <button routerLink="/profile/my-music">My Music</button>
     </form>
         </ng-container>
         <ng-container *ngIf="isEditMode">
