@@ -52,7 +52,7 @@ export const routes: Routes = [
       {
         path:"",
         pathMatch: "full",
-        canActivate: [AuthActivate],
+        // canActivate: [AuthActivate],
         component: ProfileComponent
       }
     ]
