@@ -53,7 +53,7 @@ saveProfileHandler(form: NgForm) :void {
         return;
     }
     this.profileDetails = { ...this.form.value } as Profile;
-    const { username, email} = this.profileDetails
+    const { username, email } = this.profileDetails
     this.userService.updateProfile(username!, email!).subscribe(()=> {
     this.toggleEditMode();
 });
