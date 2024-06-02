@@ -48,9 +48,14 @@ export const routes: Routes = [
   },
   {
     path: 'profile',
-    pathMatch: "full",
-    canActivate: [AuthActivate],
-    component: ProfileComponent
+    children:[
+      {
+        path:"",
+        pathMatch: "full",
+        canActivate: [AuthActivate],
+        component: ProfileComponent
+      }
+    ]
   },
   {
     path: 'add-album',
