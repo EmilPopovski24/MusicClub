@@ -16,10 +16,10 @@
         <ng-container *ngIf="isEditMode">
         <form class="profile" [formGroup]="form" (ngSubmit)="saveProfileHandler(form)">
             <div>
-                <h3 class="userinfo">Username:<input type="text" id="username" name="username" formControlName="username" > </h3>
+                <h3 class="userinfo">Username:<input type="text" id="username" name="username" formControlName="username" ngModel> </h3>
             </div>
             <div>
-                <p class="userinfo">Email:<input type="text" id="email" name="email" formControlName="email" ></p> 
+                <p class="userinfo">Email:<input type="text" id="email" name="email" formControlName="email" ngModel></p> 
             </div>
             <p class="userinfo">Addicted Music Fan</p>
             <button class="saveButton">Save</button>       
