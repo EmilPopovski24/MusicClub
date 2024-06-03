@@ -48,7 +48,7 @@ toggleEditMode(): void {
     this.isEditMode = !this.isEditMode
 }
 
-saveProfileHandler(form: NgForm) :void {
+saveProfileHandler() :void {
     if(this.form.invalid) {
         return;
     }
