@@ -14,7 +14,7 @@
         </form>
         </ng-container>
         <ng-container *ngIf="isEditMode">
-        <form class="profile" [formGroup]="form" (ngSubmit)="saveProfileHandler()">
+        <form class="profile" [formGroup]="form" (ngSubmit)="saveProfileHandler(form)">
             <div>
                 <h3 class="userinfo">Username:<input type="text" id="username" name="username" formControlName="username" > </h3>
             </div>
