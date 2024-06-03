@@ -46,8 +46,8 @@ export class UserService implements OnDestroy
 	}
 
 	updateProfile(username:string, email:string) {
-			return this.http.put<User>('/profile', {username, email})
-			.pipe(tap((user) => this.user$$.next(user)));
+		return this.http.put<User>('/profile', {username, email})
+		.pipe(tap((user) => this.user$$.next(user)));
 	}
 
 	logout() {
