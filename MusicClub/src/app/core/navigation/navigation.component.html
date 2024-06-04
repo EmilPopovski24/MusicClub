@@ -7,13 +7,14 @@
         <li routerLink="add-album">Add an Album</li>
         <li routerLink="catalog">Catalog</li>      
         <li routerLink="profile">Profile</li>
+        <li routerLink="about">About</li> 
         <li (click)="logout()">Logout</li>
       </div>
       <div class="notLogged" *ngIf="!isLogged">
         <li routerLink="login">Login</li>
         <li routerLink="register">Register</li>
+        <li routerLink="about">About</li> 
       </div>
-      <li routerLink="about">About</li> 
     </ul>
   </nav>
 </div>
