@@ -3,6 +3,7 @@ import { ErrorService } from './error.service';
 
 @Component({
   selector: 'app-error',
+  standalone: true,
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.css']
 })
