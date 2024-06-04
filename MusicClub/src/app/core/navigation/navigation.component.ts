@@ -4,6 +4,7 @@ import { RegisterComponent } from '../../user/register/register.component';
 import { Router, RouterModule } from '@angular/router';
 import { UserService } from '../../user/user.service';
 import { CommonModule } from '@angular/common';
+import { AboutComponent } from '../../about/about.component';
 
 @Component({
   selector: 'app-navigation',
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     RegisterComponent,
     RouterModule,
-    CommonModule
+    CommonModule, 
+    AboutComponent
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
