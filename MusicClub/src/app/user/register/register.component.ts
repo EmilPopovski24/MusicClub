@@ -21,6 +21,7 @@ export class RegisterComponent {
     if(form.invalid) {
       return;
     }
+    
       const { username, email , password, repeatPassword} = form.value;
       
     this.userService.register(username!, email!, password!, repeatPassword!).subscribe(()=>{
