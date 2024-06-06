@@ -17,7 +17,7 @@
       </ng-container>
 
       <label for="password">Password</label>
-      <input type="password" placeholder="Password" id="password" name="password" minlength="2" #inputPassword="ngModel" ngModel required>
+      <input type="password" placeholder="Password" id="password" name="password" minlength="5" #inputPassword="ngModel" ngModel required>
       <ng-container *ngIf="inputPassword.touched">
         <p class = "error" *ngIf="inputPassword.errors?.['required']">Password is required</p>
         <p class="error" *ngIf="inputPassword.errors?.['minlength']">
