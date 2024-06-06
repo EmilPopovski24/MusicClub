@@ -30,7 +30,6 @@ export class AppInterceptor implements HttpInterceptor {
                 }else {
                     this.router.navigateByUrl("/error")
                 }
-                
                 return [err]
             })
         );
