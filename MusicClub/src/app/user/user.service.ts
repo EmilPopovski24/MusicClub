@@ -16,9 +16,9 @@ export class UserService implements OnDestroy
 	user: User|undefined;
 
 	get isLogged():boolean {
-		// return true
 		return !!this.user
 	}
+	
 	subscription: Subscription
 	USER_KEY = '[user]';
 
