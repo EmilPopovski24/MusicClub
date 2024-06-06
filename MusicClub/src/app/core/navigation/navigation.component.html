@@ -9,11 +9,10 @@
         <li routerLink="profile">Profile</li>
         <li (click)="logout()">Logout</li>
         <li routerLink="about">About</li> 
-        
       </div>
       <div class="notLogged" *ngIf="!isLogged">
-        <li routerLink="login">Login</li>
-        <li routerLink="register">Register</li>
+        <li routerLink="login">Sign In</li>
+        <li routerLink="register">Sign Up</li>
         <li routerLink="about">About</li> 
       </div>
     </ul>
