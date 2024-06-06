@@ -27,8 +27,14 @@
       </ng-container>
 
       <label for="repeatPassword">Confirm Password</label>
-      <input type="password" placeholder="Password" id="repeatPassword" name="repeatPassword" ngModel>
-
+      <input type="password" placeholder="Password" id="repeatPassword" name="repeatPassword" minlength="5" #inputPassword="ngModel" ngModel required>
+      <ng-container *ngIf="inputPassword.touched">
+        <p class = "error" *ngIf="inputPassword.errors?.['required']">Password is required</p>
+        <p class="error" *ngIf="inputPassword.errors?.['minlength']">
+              Password must be at least
+              {{inputPassword.errors?.['minlength']['requiredLength']}} characters!
+            </p>
+      </ng-container>
       <button class="auth-btn">SignUp</button>
       
       <div class="log-link">
