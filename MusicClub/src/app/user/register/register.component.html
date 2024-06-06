@@ -7,8 +7,10 @@
       <input type="text" placeholder="Username" id="username" name="username" ngModel>
 
       <label for="email">Email</label>
-      <input type="text" placeholder="Email" id="email" name="email" ngModel>
-
+      <input type="text" placeholder="Email" id="email" name="email" minlength="5" required #inputEmail ngModel >
+      <ng-container *ngIf="inputEmail.touched">
+          <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required</p>
+      </ng-container>
       <label for="password">Password</label>
       <input type="password" placeholder="Password" id="password" name="password" ngModel>
 
@@ -20,7 +22,7 @@
       <div class="log-link">
         Have an account? Go to the <a href="/login">Login page</a>
       </div>
-      
+
   </form>
 </body>
 
