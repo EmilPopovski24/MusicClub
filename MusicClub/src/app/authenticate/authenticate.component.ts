@@ -11,8 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 
 export class AuthenticateComponent implements OnInit{
+
   isAuthenticating = true;
+  
   constructor(private userService:UserService) {}
+
   ngOnInit(): void {
     this.userService.getProfile().subscribe({
       next: () => {this.isAuthenticating = false},
@@ -20,5 +23,4 @@ export class AuthenticateComponent implements OnInit{
       complete: () => {this.isAuthenticating = false}
     })
   }
-
 }
