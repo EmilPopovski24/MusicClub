@@ -35,8 +35,7 @@ form = this.fb.group({
         const { username, email} = this.userService.user!
         this.profileDetails = {
             username,
-            email,
-            
+            email  
         }
         this.form.setValue({
             username,
