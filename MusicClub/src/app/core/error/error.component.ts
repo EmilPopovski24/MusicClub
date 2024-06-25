@@ -8,6 +8,7 @@ import { ErrorService } from './error.service';
   styleUrls: ['./error.component.css']
 })
 export class ErrorComponent implements OnInit {
+	
 	apiError$ = this.errorService.apiError$$.asObservable();
 
 	errorMessage = "";
