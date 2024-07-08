@@ -73,10 +73,5 @@ export const routes: Routes = [
     path: 'about',
     pathMatch: "full",
     component: AboutComponent,
-  },
-  // {
-  //   path: "error",
-  //   pathMatch: "full",
-  //   component: ErrorComponent,
-  // },
+  }
 ];
