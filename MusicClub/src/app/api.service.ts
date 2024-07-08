@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { Album } from './types/Album';
 import { environment } from '../environments/environment';
 
