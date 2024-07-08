@@ -1,6 +1,5 @@
 import { FormGroup, ValidatorFn } from "@angular/forms";
 
-
 export function matchPassValidator(password1: string, password2:string): ValidatorFn {
 
     return(control) => {
