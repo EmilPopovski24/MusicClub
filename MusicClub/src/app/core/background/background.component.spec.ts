@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BackgroundComponent } from './background.component';
 
 describe('BackgroundComponent', () => {
