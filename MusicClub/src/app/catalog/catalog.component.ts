@@ -28,7 +28,4 @@ export class CatalogComponent implements OnInit{
   get isLogged(): boolean {
     return this.userService.isLogged;
     }
-
-
-
 }
