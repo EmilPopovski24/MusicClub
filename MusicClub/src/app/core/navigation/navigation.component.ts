@@ -36,4 +36,3 @@ export class NavigationComponent {
   return this.userService.isLogged;
   }
   }
-  
