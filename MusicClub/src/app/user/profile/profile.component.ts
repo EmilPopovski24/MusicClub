@@ -47,10 +47,12 @@ toggleEditMode(): void {
     this.isEditMode = !this.isEditMode
 }
 
-saveProfileHandler() :void {
+saveProfileHandler() :void { 
+    
     if(this.form.invalid) {
         return;
     }
+
     this.profileDetails = { ...this.form.value } as Profile;
     const { username, email } = this.profileDetails
     this.userService.updateProfile(username!, email!).subscribe(()=> {
