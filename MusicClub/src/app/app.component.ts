@@ -12,7 +12,8 @@ import { CoreModule } from './core/core.module';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
-import { DetailsComponent } from './details/details.component';
+// import { DetailsComponent } from './details/details.component';
+import { ErrorComponent } from './core/error/error.component';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,8 @@ import { DetailsComponent } from './details/details.component';
     AboutComponent, 
     HttpClientModule,
     AuthenticateComponent, 
-    DetailsComponent
+    // DetailsComponent, 
+    ErrorComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
