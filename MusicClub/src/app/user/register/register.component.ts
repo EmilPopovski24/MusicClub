@@ -27,7 +27,6 @@ export class RegisterComponent {
     this.userService.register(username!, email!, password!, repeatPassword!).subscribe(()=>{
       this.router.navigate(['/catalog'])
     })
-
   }
 }
 

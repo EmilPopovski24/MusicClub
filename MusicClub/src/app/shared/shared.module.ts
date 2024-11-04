@@ -8,6 +8,6 @@ import { AppEmailDirective } from './validators/email.directive';
   imports: [CommonModule, SpinnerComponent],
   exports: [SpinnerComponent, AppEmailDirective]
 })
-export class SharedModule { }
+export class SharedModule {}
 
 export const EMAIL_DOMAINS = ["bg", "com", "net", "org"];
