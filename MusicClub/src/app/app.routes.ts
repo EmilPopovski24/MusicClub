@@ -7,7 +7,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { AddAlbumComponent } from './add-album/add-album.component';
 import { AboutComponent } from './about/about.component';
 import { AuthActivate } from './core/guards/auth.activate';
-import { DetailsComponent } from './details/details.component';
+// import { DetailsComponent } from './details/details.component';
 
 export const routes: Routes = [
   {
@@ -28,12 +28,12 @@ export const routes: Routes = [
         pathMatch: "full",
         component: CatalogComponent
       },
-      {
-        path: ':name',
-        pathMatch: "full",
-        canActivate: [AuthActivate],
-        component: DetailsComponent
-      }
+      // {
+      //   path: ':name',
+      //   pathMatch: "full",
+      //   canActivate: [AuthActivate],
+      //   component: DetailsComponent
+      // }
     ]
   }, 
   {
