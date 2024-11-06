@@ -22,12 +22,12 @@ isEditMode: boolean = false;
 profileDetails: Profile = {
     username: '',
     email: '',
-}
+};
 
 form = this.fb.group({
     username: ["", [Validators.required, Validators.minLength(2)]],
     email: ["", [Validators.required, appEmailValidator(EMAIL_DOMAINS)]]
-})
+});
 
     constructor(private fb: FormBuilder,private userService:UserService) {}
     
